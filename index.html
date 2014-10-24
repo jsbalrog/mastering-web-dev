@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Title</title>
+	<script src="lib/vendor/angular.js" type="text/javascript"></script>
+	<script src="lib/main.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body data-ng-app="myApp">
+
+<div ng-controller="MyCtrl">
+	<h4>Directive with same scope as parent</h4>
+	<btn-directive type="submit">Submit</btn-directive>
+	<br/>
+	<br/>
+	<h4>Directive with isolate scopes</h4>
+	<pg-directive num-pages="tasks.pageCount" current-page="tasks.currentPage" on-select-page="selectPage(page)"></pg-directive>
+</div>
+
+</body>
+</html>
